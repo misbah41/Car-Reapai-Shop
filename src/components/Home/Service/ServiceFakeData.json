@@ -1,0 +1,29 @@
+[
+  {
+    "serviceTitle":"Car Washing",
+    "seviceImg":"https://media.gettyimages.com/photos/black-mechanic-working-on-car-picture-id142457807",
+    "servicePrice":"$ 2500",
+    "worker":"Misbah Hasan",
+    "discount":"10%",
+    "discountPost":"OFF",
+    "serviceKey":"BDG64HRSRDF"
+  },
+  {
+    "serviceTitle":"Body Painting",
+    "seviceImg":"https://media.gettyimages.com/photos/black-mechanic-working-on-car-picture-id142457807",
+    "servicePrice":"$ 3000",
+    "worker":"Musaddek Mahmud",
+    "discount":"14%",
+    "discountPost":"OFF",
+    "serviceKey":"YXERMS65VFSS"
+  },
+  {
+    "serviceTitle":"Oill Changing",
+    "seviceImg":"https://media.gettyimages.com/photos/black-mechanic-working-on-car-picture-id142457807",
+    "servicePrice":"$ 1200",
+    "worker":"Munayeem",
+    "discount":"14%",
+    "discountPost":"OFF",
+    "serviceKey":"BBHDGS653NBY"
+  }
+]

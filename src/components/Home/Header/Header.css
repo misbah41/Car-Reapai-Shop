@@ -1,0 +1,13 @@
+.header-wrapper {
+  /* position: absolute; */
+  width: 100%;
+  background-color: rgb(28, 37, 77) !important;
+  color: #fff !important;
+  position:absolute;
+}
+.nav-link{
+  color: #fff !important;
+  font-family: sans-serif;
+  font-size:15px;
+  letter-spacing:1.4px;
+}
