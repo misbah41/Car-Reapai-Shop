@@ -9,16 +9,19 @@ import {
 import InfoCard from "../InfoCard/InfoCard";
 const infoCardData = [
   {
+    id:'7835efrhd65v',
     infoTitle: "Mail Us Today",
     infoPost: "info@yourdomain.com",
     infoIcon: faEnvelope,
   },
   {
+    id:'ndhg45363523',
     infoTitle: "Company Location",
     infoPost: "121 King Street, Melbourne",
     infoIcon: faMapMarkedAlt,
   },
   {
+    id:'76354gdnsb4',
     infoTitle: "+(012) 345 6789",
     infoPost: "Call us for more details",
     infoIcon: faPhoneSquareAlt,
@@ -50,7 +53,7 @@ const Banner = () => {
           {infoCardData.map((infoData) => (
             <div className="col-sm-6 col-md-4">
               <div style={{color:'#fff'}} className="social ">
-                <InfoCard infoData={infoData} />
+                <InfoCard key={infoData.id} infoData={infoData} />
               </div>
             </div>
           ))}

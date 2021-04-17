@@ -6,7 +6,8 @@
     "worker":"Misbah Hasan",
     "discount":"10%",
     "discountPost":"OFF",
-    "serviceKey":"BDG64HRSRDF"
+    "serviceKey":"BDG64HRSRDF",
+    "serviceDescription":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, reiciendis quia. Possimus, aspernatur nisi, ut quae excepturi rem dolores recusandae hic eos dolor at, dicta earum nostrum "
   },
   {
     "serviceTitle":"Body Painting",
@@ -15,7 +16,9 @@
     "worker":"Musaddek Mahmud",
     "discount":"14%",
     "discountPost":"OFF",
-    "serviceKey":"YXERMS65VFSS"
+    "serviceKey":"YXERMS65VFSS",
+    "serviceDescription":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, reiciendis quia. Possimus, aspernatur nisi, ut quae excepturi rem dolores recusandae hic eos dolor at, dicta earum nostrum "
+
   },
   {
     "serviceTitle":"Oill Changing",
@@ -24,6 +27,8 @@
     "worker":"Munayeem",
     "discount":"14%",
     "discountPost":"OFF",
-    "serviceKey":"BBHDGS653NBY"
+    "serviceKey":"BBHDGS653NBY",
+    "serviceDescription":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, reiciendis quia. Possimus, aspernatur nisi, ut quae excepturi rem dolores recusandae hic eos dolor at, dicta earum nostrum "
+
   }
 ]

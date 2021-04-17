@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 const Testimonials = () => {
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(()=>{
+    fetch('http://localhost:3500/userReview')
+    .then(res => res.json())
+    .then(data => setReviews(data));
+  },[])
+
+  
+
   return (
     <div className="container mt-5 mb-5 pt-5">
       <h2>What Clients Say ?</h2>
