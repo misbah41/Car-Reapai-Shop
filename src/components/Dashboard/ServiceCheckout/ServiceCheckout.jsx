@@ -11,7 +11,7 @@ const ServiceCheckout = () => {
   localStorage.setItem('dynamicId', id);
   
   useEffect(() => {
-    fetch("http://localhost:3500/serviceById/" + id)
+    fetch("http://localhost:3500/serviceById/"+id)
       .then((res) => res.json())
       .then((data) => setBook(data));
   }, [id]);

@@ -27,11 +27,15 @@ const Sidebar = () => {
       .then((data) => setIsAdmin(data));
   }, []);
 
-  const routeId = localStorage.getItem("dynamicId");
 
   return (
     <aside className="sidebar">
       <ul>
+        <li className="nav-item">
+          <Link className="nav-link sidebar-link" to="/home">
+            <FontAwesomeIcon icon={faHome} /> Back To Home
+          </Link>
+        </li>
         {isAdmin ? (
           <div>
             <li className="nav-item">
@@ -60,7 +64,7 @@ const Sidebar = () => {
             <li className="nav-item">
               <Link
                 className="nav-link sidebar-link"
-                to={`/serviceCheckout/${routeId}`}
+                to="/emtycheckout"
               >
                 <FontAwesomeIcon icon={faCartPlus} /> Order
               </Link>
@@ -77,11 +81,6 @@ const Sidebar = () => {
             </li>
           </div>
         )}
-        <li className="nav-item">
-          <Link className="nav-link sidebar-link" to="/home">
-            <FontAwesomeIcon icon={faHome} /> Back To Home
-          </Link>
-        </li>
       </ul>
     </aside>
   );

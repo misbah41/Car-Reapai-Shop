@@ -1,14 +1,16 @@
 .banner {
-  /* background-image: url("../../../../images/bg7.jpg"); */
   background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.555),
+      rgba(0, 0, 0, 0.555),
       rgba(0, 0, 0, 0.514)
     ),
-    url("../../../../images/bg7.jpg");
+    url("../../../../images/banner2.png");
   height: 100%;
   padding-top: 188px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 .banner-title,
 .subtitle {

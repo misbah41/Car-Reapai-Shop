@@ -4,7 +4,7 @@ import "firebase/auth";
 import { useHistory, useLocation } from "react-router";
 import firebaseConfig from "./firebase.config";
 import { UserContext } from "../../../App";
-
+import "./Login.css";
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 } else {
@@ -15,13 +15,8 @@ const LogIn = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
   const location = useLocation();
-  const { from } = location.state || { from: { pathname: "/" } };
-  const [userInfo, setUserInfo] = useState({
-    isSignIn: false,
-    username: "",
-    email: "",
-    photo: "",
-  });
+  const { from } = location.state || { from: { pathname: "/dashboard" } };
+
   const handleGoogleSignIn = () => {
     const GoogleProvider = new firebase.auth.GoogleAuthProvider();
     firebase
@@ -35,12 +30,14 @@ const LogIn = () => {
           email: email,
           isSignIn: true,
         };
-        stocklocalStorage(userSignIn.email, userSignIn.username, userSignIn.photo)
-        setUserInfo(userSignIn);
+        stocklocalStorage(
+          userSignIn.email,
+          userSignIn.username,
+          userSignIn.photo
+        );
         setLoggedInUser(userSignIn);
         storeAuthToken();
         history.replace(from);
-        // console.log(userSignIn.username);
       })
       .catch((error) => {
         console.log("Login Error", error.message);
@@ -62,45 +59,32 @@ const LogIn = () => {
 
   const stocklocalStorage = (userEmail, userName) => {
     localStorage.setItem("userEmail", userEmail);
-    localStorage.setItem("userName",userName);
+    localStorage.setItem("userName", userName);
   };
-
 
   return (
     <div className="container text-center pb-5 mb-5">
-      <div className="single-card">
+      <div className="single-card" style={{ marginTop: "200px" }}>
         <div className="face face2">
-          <div className="content">
-            <button
-              style={{ width: "48%", paddingTop: "5px", paddingBottom: "5px" }}
-              className="submitBtn"
-              onClick={handleGoogleSignIn}
-            >
-              <img
-                src="http://pngimg.com/uploads/google/google_PNG19630.png"
-                width="30px"
-                alt=".."
-              />{" "}
-              Login
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="single-card">
-        <div className="face face2">
-          <div className="content">
-            <button
-              style={{ width: "48%", paddingTop: "5px", paddingBottom: "5px" }}
-              className="submitBtn"
-            >
-              <img
-                src="https://freepngimg.com/thumb/facebook/24751-6-facebook-logo-file.png"
-                width="30px"
-                alt=".."
-              />{" "}
-              Login
-            </button>
-          </div>
+          <button
+            style={{
+              width: "48%",
+              paddingTop: "5px",
+              paddingBottom: "5px",
+              border: "none",
+              fontSize: "40px",
+              fontWeight: "700",
+            }}
+            className="submitBtn"
+            onClick={handleGoogleSignIn}
+          >
+            <img
+              src="http://pngimg.com/uploads/google/google_PNG19630.png"
+              width="30px"
+              alt=".."
+            />{" "}
+            Login
+          </button>
         </div>
       </div>
     </div>

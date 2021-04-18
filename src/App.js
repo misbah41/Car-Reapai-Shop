@@ -13,6 +13,7 @@ import AddServices from "./components/Dashboard/AddServices/AddServices";
 import CreateAdmin from "./components/Dashboard/CreateAdmin/CreateAdmin";
 import UsersOrder from "./components/Dashboard/UsersOrder/UsersOrder";
 import ManageServices from "./components/Dashboard/ManageServices/ManageServices";
+import EmtyCheckOut from "./components/Dashboard/EmtyCheckOut/EmtyCheckOut";
 
 export const UserContext = createContext();
 
@@ -39,8 +40,8 @@ function App() {
             <PrivateRouter path="/servicecheckout/:id">
               <ServiceCheckout />
             </PrivateRouter>
-            <PrivateRouter path="/servicecheckout/:routeId">
-              <ServiceCheckout />
+            <PrivateRouter path="/emtycheckout">
+              <EmtyCheckOut/>
             </PrivateRouter>
             <PrivateRouter path="/orderlist">
               <OrderList />
