@@ -10,7 +10,6 @@ const ManageServices = () => {
       .then((data) => setServicesData(data));
   }, []);
 
-  console.log(servicesData);
 
   const deleteService = (id) => {
     fetch(`http://localhost:3500/delete/${id}`, {
@@ -20,7 +19,7 @@ const ManageServices = () => {
         console.log("response", res);
       })
       .catch((error) => {
-        console.log("error massage for delete book", error);
+        console.log("error massage for delete service", error);
       });
     setServicesData(servicesData.filter((service) => service._id !== id));
   };
