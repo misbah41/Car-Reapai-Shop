@@ -14,7 +14,7 @@ const Review = () => {
 
   const onSubmit = (data) => {
     data.createDate = new Date();
-    fetch('http://localhost:3500/addReview',{
+    fetch('https://obscure-hamlet-08357.herokuapp.com/addReview',{
       method: 'POST',
       headers: {'content-Type':'application/json'},
       body: JSON.stringify(data)

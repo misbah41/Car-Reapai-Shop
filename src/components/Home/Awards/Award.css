@@ -1,0 +1,20 @@
+
+.award-wrapper{
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.401),
+    rgba(0, 0, 0, 0.401)
+  ),
+  url("./awardbg.png");
+  height: 500px;
+  background-repeat: no-repeat;
+  padding-top: 150px;
+  background-attachment: fixed;
+}
+.awardCard{
+  border-bottom:1px solid brown;
+  background-color: #fff;
+  padding: 5px;
+}
+
+

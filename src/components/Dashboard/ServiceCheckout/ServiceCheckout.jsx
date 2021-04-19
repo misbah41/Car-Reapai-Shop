@@ -11,7 +11,7 @@ const ServiceCheckout = () => {
   localStorage.setItem('dynamicId', id);
   
   useEffect(() => {
-    fetch("http://localhost:3500/serviceById/"+id)
+    fetch("https://obscure-hamlet-08357.herokuapp.com/serviceById/"+id)
       .then((res) => res.json())
       .then((data) => setBook(data));
   }, [id]);
@@ -29,7 +29,7 @@ const ServiceCheckout = () => {
     const { description, name, discount, serviceOff, servicePrice } = book;
     const parseData = { description, name, discount, serviceOff, servicePrice };
     const confirmOrder = { ...loggedInUser, date: dateFormate, parseData, paymentId };
-    fetch("http://localhost:3500/addorder", {
+    fetch("https://obscure-hamlet-08357.herokuapp.com/addorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -21,52 +21,49 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    <div>
-      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/login">
-              <LogIn />
-            </Route>
-            <PrivateRouter path="/dashboard">
-              <Dashboard />
-            </PrivateRouter>
-            <PrivateRouter path="/servicecheckout/:id">
-              <ServiceCheckout />
-            </PrivateRouter>
-            <PrivateRouter path="/emtycheckout">
-              <EmtyCheckOut />
-            </PrivateRouter>
-            <PrivateRouter path="/orderlist">
-              <OrderList />
-            </PrivateRouter>
-            <PrivateRouter path="/review">
-              <Review />
-            </PrivateRouter>
-            <PrivateRouter path="/addservices">
-              <AddServices />
-            </PrivateRouter>
-            <PrivateRouter path="/createadmin">
-              <CreateAdmin />
-            </PrivateRouter>
-            <PrivateRouter path="/usersorder">
-              <UsersOrder />
-            </PrivateRouter>
-            <PrivateRouter path="/manageservices">
-              <ManageServices />
-            </PrivateRouter>
-          </Switch>
-        </Router>
-      </UserContext.Provider>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <LogIn />
+          </Route>
+          <PrivateRouter path="/dashboard">
+            <Dashboard />
+          </PrivateRouter>
+          <PrivateRouter path="/servicecheckout/:id">
+            <ServiceCheckout />
+          </PrivateRouter>
+          <PrivateRouter path="/emtycheckout">
+            <EmtyCheckOut />
+          </PrivateRouter>
+          <PrivateRouter path="/orderlist">
+            <OrderList />
+          </PrivateRouter>
+          <PrivateRouter path="/review">
+            <Review />
+          </PrivateRouter>
+          <PrivateRouter path="/addservices">
+            <AddServices />
+          </PrivateRouter>
+          <PrivateRouter path="/createadmin">
+            <CreateAdmin />
+          </PrivateRouter>
+          <PrivateRouter path="/usersorder">
+            <UsersOrder />
+          </PrivateRouter>
+          <PrivateRouter path="/manageservices">
+            <ManageServices />
+          </PrivateRouter>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
 export default App;
-

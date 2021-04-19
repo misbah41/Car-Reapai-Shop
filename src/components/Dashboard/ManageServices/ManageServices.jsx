@@ -5,14 +5,14 @@ const ManageServices = () => {
   const [servicesData, setServicesData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3500/loadServicesData")
+    fetch("https://obscure-hamlet-08357.herokuapp.com/loadServicesData")
       .then((res) => res.json())
       .then((data) => setServicesData(data));
   }, []);
 
 
   const deleteService = (id) => {
-    fetch(`http://localhost:3500/delete/${id}`, {
+    fetch(`https://obscure-hamlet-08357.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => {

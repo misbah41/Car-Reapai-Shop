@@ -13,7 +13,7 @@ const CreateAdmin = () => {
   const onSubmit = (data, e) => {
     e.preventDefault();
     data.createDate = new Date();
-    fetch('http://localhost:3500/adminAccess',{
+    fetch('https://obscure-hamlet-08357.herokuapp.com/adminAccess',{
       method: 'POST',
       headers: {'content-Type':'application/json'},
       body: JSON.stringify(data)

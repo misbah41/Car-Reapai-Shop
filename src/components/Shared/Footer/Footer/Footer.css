@@ -1,4 +1,23 @@
-.footerWrapper{
+.footerWrapper {
   background-color: rgb(20, 3, 53);
   color: aliceblue;
+  position: relative;
+}
+
+.footerWrapper::before{
+  position: absolute;
+  content: "";
+  top: -20%;
+  left: 0;
+  background-color: rgb(20, 3, 53);
+  width: 20%;
+  height: 120%;
+  border-top-right-radius: 20px;
+}
+
+
+
+.usefullLink >ul> li {
+  cursor: pointer;
+  list-style: none;
 }

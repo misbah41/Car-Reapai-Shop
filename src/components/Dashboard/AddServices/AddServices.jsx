@@ -23,7 +23,7 @@ const AddServices = () => {
     formData.append("serviceOff", info.serviceOff);
     formData.append("description", info.description);
 
-    fetch("http://localhost:3500/addService", {
+    fetch("https://obscure-hamlet-08357.herokuapp.com/addService", {
       method: "POST",
       // headers: {'content-Type':'application/json'},
       body: formData,

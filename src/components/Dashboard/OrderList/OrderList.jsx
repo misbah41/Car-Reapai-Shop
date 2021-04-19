@@ -6,7 +6,7 @@ const OrderList = () => {
   const [orders, setOrders] = useState([]);
   const userEmail = localStorage.getItem("userEmail");
   useEffect(() => {
-    fetch(`http://localhost:3500/bookingList/${userEmail}`)
+    fetch(`https://obscure-hamlet-08357.herokuapp.com/bookingList/${userEmail}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
