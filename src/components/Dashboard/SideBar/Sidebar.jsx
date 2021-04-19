@@ -36,7 +36,7 @@ const Sidebar = () => {
 
   let navbarClasses = ["sidebar"];
   if (clicked) {
-    navbarClasses.push("scrolled");
+    navbarClasses.push("clickedClass");
     navbarClasses.shift();
   }
 
