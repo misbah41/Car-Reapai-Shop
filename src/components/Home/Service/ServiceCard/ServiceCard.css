@@ -1,29 +1,88 @@
-.service-card{
-text-align: center;
--webkit-box-shadow: 0px 4px 10px 3px rgba(0,0,0,0.20); 
-box-shadow: 0px 4px 10px 3px rgba(0,0,0,0.20);
-padding-top: 20px;
-padding-bottom: 20px;
-border-radius: 5px;
+.service-card {
+  text-align: center;
+  -webkit-box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.2);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
 }
-.service-card>img{
+.service-card > img {
   height: 220px;
   width: 80%;
   margin: 0 auto;
 }
-.serviceBtn{
-  outline: none;
+
+.serviceBtn {
+  background-color: #ffffff;
   border: none;
-  background-color: rgb(11, 4, 109);
-  color: aliceblue;
-  padding: 4px 14px;
+  border-bottom: 6px solid #029ebe;
+  border-top: 6px solid #029ebe;
+  color: rgb(71, 71, 71);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 46px;
+  letter-spacing: 2px;
+  line-height: 34px;
+  outline: none;
+  padding: 0 10px;
+  position: relative;
+  text-transform: uppercase;
 }
-.servicePrice{
+
+.serviceBtn:before,
+.serviceBtn:after {
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: -6px;
+  content: "";
+  height: 46px;
+  position: absolute;
+  width: 46px;
+  border: 6px solid #ddd;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.serviceBtn:before {
+  right: -23px;
+  border-left-color: #029ebe;
+  border-bottom-color: #029ebe;
+}
+
+.serviceBtn:after {
+  left: -23px;
+  border-right-color: #029ebe;
+  border-top-color: #029ebe;
+}
+
+.serviceBtn:hover,
+.serviceBtn.hover {
+  background-color: #ffffff;
+}
+
+.serviceBtn:hover:before,
+.serviceBtn.hover:before,
+.serviceBtn:hover:after,
+.serviceBtn.hover:after {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+
+
+.servicePrice {
   font-size: 18px;
   color: rgb(11, 4, 109);
-
+  margin-top: 9px;
 }
-.serviceTitle>h4{
+.serviceTitle > h4 {
   color: rgb(11, 4, 109);
   font-size: 22px;
   margin-top: 15px;
@@ -31,37 +90,22 @@ border-radius: 5px;
   margin-bottom: 15px;
 }
 
-
-.serviceDiscount{
+.serviceDiscount {
   margin-top: -42px;
   font-size: 20px;
 }
-.discount{
+.discount {
   background-color: rgb(11, 4, 109);
   color: aliceblue;
   font-weight: 700;
   font-size: 30px;
 }
-.discOff{
+.discOff {
   font-weight: 700;
 }
 
-
 @media (min-width: 320px) and (max-width: 767px) {
-  .service-card{
+  .service-card {
     margin-top: 20px;
   }
-    
-    
-  }
-
-
-
-
-
-
-
-
-
-
-
+}

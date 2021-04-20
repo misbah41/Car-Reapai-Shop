@@ -14,7 +14,7 @@ const ServiceCard = ({ serviceData }) => {
           <small className='discOff'>{serviceData.serviceOff}</small>
         </div>
       </div>
-      <div className="d-flex justify-content-around">
+      <div className="d-flex justify-content-around mt-5">
         <Link className='serviceBtn' to={`/serviceCheckout/${serviceData._id}`} >Get Service</Link>
         <h5 className='servicePrice'>$ {serviceData.servicePrice}</h5>
       </div>
