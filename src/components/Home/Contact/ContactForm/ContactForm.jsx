@@ -13,7 +13,22 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data) => {
+    data.submitedDate = new Date();
+    fetch("https://obscure-hamlet-08357.herokuapp.com/contact", {
+      method: "POST",
+      headers: { "content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((success) => {
+        if (success) {
+          alert("thank you for connect our team");
+        }
+      });
+  };
+
   return (
     <div
       id="contact"
