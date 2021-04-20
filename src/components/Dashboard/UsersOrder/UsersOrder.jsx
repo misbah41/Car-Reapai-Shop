@@ -28,12 +28,13 @@ const UsersOrder = () => {
               <th>Status </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody style={{padding:'20px'}}>
             {orders.map((order) => (
               <tr key={order._id}>
-                <td>{order.username}</td>
-                <td>{order.email}</td>
-                <td>{order.parseData.name}</td>
+                <td style={{paddingLeft:'10px', paddingTop:'10px', backgroundColor:'gray'}}>{order.username}</td>
+                <td style={{paddingLeft:'10px', paddingTop:'10px', backgroundColor:'gray'}}>{order.email}</td>
+                <td style={{paddingLeft:'10px', paddingTop:'10px', backgroundColor:'gray'}}>{order.parseData.name}</td>
+                <td style={{paddingLeft:'10px', paddingTop:'10px', backgroundColor:'gray'}}>VISA CARD</td>
               </tr>
             ))}
           </tbody>

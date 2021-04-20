@@ -15,13 +15,15 @@ const Testimonials = () => {
   console.log(reviews);
 
   return (
-    <div className="container mt-5 mb-5 pt-5" id='reviews'>
+    <div className="container mt-5 mb-5 pt-5" id="reviews">
       <div className="titleDiv">
         <h3 className="title">What Clients Say ?</h3>
       </div>
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <img src={Reviewimg} class="img-fluid" alt="Responsive image" />
+          <div className="reviewImg">
+            <img src={Reviewimg} class="img-fluid" alt="Responsive image" />
+          </div>
         </div>
         <div className="col-md-6">
           <Carousel>

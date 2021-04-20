@@ -30,19 +30,19 @@ const ManageServices = () => {
         <Sidebar />
       </div>
       <div className="ml-5">
-        <h3>This is ManageServices page</h3>
+        <h4>All Service Here You Want Edit or Delete This Service</h4>
         <table>
           <thead>
             <tr>
               <th>Service Name</th>
-              <th>Service Price</th>
+              <th style={{paddingLeft:'10px'}}>Service Price</th>
             </tr>
           </thead>
           <tbody>
             {servicesData.map((service) => (
               <tr key={service._id}>
                 <td>{service.name}</td>
-                <td>{service.servicePrice}</td>
+                <td style={{paddingLeft:'10px'}}>{service.servicePrice}</td>
                 <td className="text-center">
                   <button
                     onClick={() => deleteService(service._id)}

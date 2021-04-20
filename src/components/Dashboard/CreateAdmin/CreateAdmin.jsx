@@ -21,7 +21,7 @@ const CreateAdmin = () => {
     .then(res => res.json())
     .then(success =>{
       if(success){
-        alert('thank you for add adminAccess your greate review')
+        alert('thank you for add adminAccess ')
       }
     })
   }

@@ -41,17 +41,22 @@ const Chose = () => {
       <div className="container">
         <div className="row jsutify-content-center">
           <div className="col-md-5">
-            <img
-              style={{ width: "100%", height: "350px" }}
-              src={chooseImage}
-              alt=""
-            />
+            <div className="chooseimg">
+              <img
+                style={{ width: "100%", height: "350px" }}
+                src={chooseImage}
+                alt=""
+              />
+            </div>
           </div>
           <div className="col-md-7 ">
-            <div className="titleDiv">
+            <div
+              className="titleDiv"
+              style={{ marginBottom: "50px", marginTop: "-20px" }}
+            >
               <h3 className="title ">Why Choose Us ?</h3>
             </div>
-            <div className="row mt-5 justify-content-center">
+            <div className="row  justify-content-center">
               {choseData.map((data) => (
                 <div className="col-sm-12 col-md-6">
                   <ChoseCard key={data.id} data={data} />

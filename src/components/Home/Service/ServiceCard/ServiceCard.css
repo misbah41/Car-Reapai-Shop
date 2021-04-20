@@ -47,7 +47,13 @@ border-radius: 5px;
 }
 
 
-
+@media (min-width: 320px) and (max-width: 767px) {
+  .service-card{
+    margin-top: 20px;
+  }
+    
+    
+  }
 
 
 

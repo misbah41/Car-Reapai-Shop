@@ -3,15 +3,21 @@
   box-shadow: 0px 10px 15px -9px rgba(0, 0, 0, 0.38);
   padding: 20px;
 }
-.carousel .carousel-status{
+.carousel .carousel-status {
   font-size: 20px;
   color: black;
 }
 
-.carousel .control-dots .dot{
+.carousel .control-dots .dot {
   font-size: 20px;
   color: black;
   background-color: black;
   width: 20px;
   border-radius: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .reviewImg {
+    margin-top: 100px;
+  }
 }
