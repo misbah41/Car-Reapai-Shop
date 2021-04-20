@@ -6,7 +6,7 @@ import {
   faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
 import AwardCards from "./AwardCards/AwardCards";
-import './Award.css';
+import "./Award.css";
 const awardsData = [
   {
     awardsTitle: "VEHICLES SERVICED",
@@ -32,12 +32,12 @@ const awardsData = [
 
 const Awards = () => {
   return (
-    <section className='award-wrapper'>
+    <section className="award-wrapper">
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-center">
           <div className="col-12">
-            <div>
-              <h3>We Got Many Award For Good Quality Work</h3>
+            <div className="titleDiv">
+              <h3 className="title text-white">We Got Many Award For Good Quality Work</h3>
             </div>
           </div>
           {awardsData.map((award) => (

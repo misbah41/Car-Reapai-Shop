@@ -1,8 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons' ;
-import './ContactForm.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import "./ContactForm.css";
 const ContactForm = () => {
   const {
     register,
@@ -11,8 +15,14 @@ const ContactForm = () => {
   } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <div id="contact" style={{ textAlign: "center" }} className="container mb-5 pb-5">
-      <h3 className='title'>Stay Connect With Our Team</h3>
+    <div
+      id="contact"
+      style={{ textAlign: "center" }}
+      className="container mb-5 pb-5"
+    >
+      <div className="titleDiv">
+        <h3 className="title">Stay Connect With Our Team</h3>
+      </div>
       <div className="row">
         <div className="col-sm-8">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -61,7 +71,8 @@ const ContactForm = () => {
               </div>
             </div>
             <div className="col-12">
-              <textarea style={{width:'102%'}}
+              <textarea
+                style={{ width: "102%" }}
                 className="form-control my-3 input-form"
                 placeholder="Enter Your Subject"
                 {...register("msg", { required: true })}
@@ -72,13 +83,19 @@ const ContactForm = () => {
               )}
             </div>
             <br />
-            <input className="msg-btn " type="submit" value='SEND'/>
+            <input className="msg-btn " type="submit" value="SEND" />
           </form>
         </div>
         <div className="col-sm-4 mt-3">
-          <div className='social-icon ' style={{}}><FontAwesomeIcon icon={faFacebookF} /></div>
-          <div className='social-icon'><FontAwesomeIcon icon={faTwitter} /></div>
-          <div className='social-icon'><FontAwesomeIcon icon={faLinkedin} /></div>
+          <div className="social-icon " style={{}}>
+            <FontAwesomeIcon icon={faFacebookF} />
+          </div>
+          <div className="social-icon">
+            <FontAwesomeIcon icon={faTwitter} />
+          </div>
+          <div className="social-icon">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </div>
         </div>
       </div>
     </div>

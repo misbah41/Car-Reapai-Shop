@@ -14,8 +14,10 @@ const Service = () => {
   return (
     <div className="service-wrapper" id="services">
       <div className="container mt-5 pt-5 mb-5">
-        <h3 className="text-center">Our Awesome Services</h3>
-        <div className="row">
+        <div className="titleDiv">
+          <h3 className="title text-center">Our Awesome Services</h3>
+        </div>
+        <div className="row justify-content-center">
           {servicesData.map((serviceData) => (
             <div className="col-sm-6 col-md-4">
               {" "}

@@ -2,8 +2,8 @@
 .award-wrapper{
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.401),
-    rgba(0, 0, 0, 0.401)
+    rgba(0, 0, 0, 0.601),
+    rgba(0, 0, 0, 0.601)
   ),
   url("./awardbg.png");
   height: 500px;

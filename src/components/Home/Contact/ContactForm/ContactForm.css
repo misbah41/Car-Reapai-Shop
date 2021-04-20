@@ -46,10 +46,7 @@
   border-top-right-radius: 50px;
   z-index: -11;
 }
-.title{
-  font-weight: 900;
-  color: rgb(28, 37, 77) ;
-}
+
 
 .input-form{
   border: none!important;
